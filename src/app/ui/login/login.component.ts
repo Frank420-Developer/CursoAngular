@@ -9,6 +9,8 @@ export class LoginComponent implements OnInit {
 
   public titulo = 'Iniciar Sesión';
   public saludoBienvenida: string;
+  public numero: number = 24;
+  public flag: boolean = true;
 
   constructor() {
     console.log("Inicialización en el constructor");
