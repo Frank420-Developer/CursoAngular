@@ -1,3 +1,13 @@
-<h1>{{ titulo }}</h1>
-<p>login works!</p>
+
+<div>
+    <h1>{{ titulo }}</h1>
+    <button (click)="cerrarMenu()" [ngClass]="cambiarColor()">Abrir Menú</button>
+    <div id="menu" #menu class="menu-login" [class.menu-abierto]="menuAbierto" 
+    [class.menu-cerrado]= "!menuAbierto">
+        <p style="color: white;">Menú</p>
+    </div>
+
+
+    <p *ngIf="menuAbierto">Mensaje de BIENVENIDA</p>
+</div>
 
