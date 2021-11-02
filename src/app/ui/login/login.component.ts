@@ -3,6 +3,10 @@ import { Component, OnInit } from '@angular/core';
 /* Importaciones de utilidades */
 import * as ConstantsApp from '../login/utils/ConstantsApps';
 
+export interface Alumnos{
+   nombre: string,
+   apellido: string
+}
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,9 +22,24 @@ export class LoginComponent implements OnInit {
   public contentMargin = ConstantsApp.ANCHO_MENU_CERRADO;
   public menuAbierto = false;
 
+  public listaAlumnos:Alumnos[];
+
   constructor() {
     console.log("Inicialización en el constructor");
     this.saludoBienvenida = '';
+
+    this.listaAlumnos = [
+      {  nombre: 'Brandon', apellido: 'Rojas' },
+      {  nombre: 'Fernando', apellido: 'Rivera' },
+      {  nombre: 'Francisco', apellido: 'Vera' },
+      {  nombre: 'Jonathan', apellido: 'Padilla' },
+      {  nombre: 'Luis', apellido: 'Carrillo' },
+      {  nombre: 'Mariet', apellido: 'Pina' },
+      {  nombre: 'Martin', apellido: 'Fabian' },
+      {  nombre: 'Oscar', apellido: 'Nuñez' },
+      {  nombre: 'Uriel', apellido: 'Lugo' },
+      {  nombre: 'Victor', apellido: 'Morales' },
+    ];
   }
 
   /**
